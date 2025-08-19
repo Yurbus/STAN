@@ -128,16 +128,16 @@ observer.observe(headerRight, {
 // --------- header------------------------------------------------
 window.addEventListener('scroll', function () {
   const header = document.getElementById('header');
-  const links = header.querySelectorAll('*'); // выбираем все вложенные элементы
+  // const links = header.querySelectorAll('*'); // выбираем все вложенные элементы
 
   if (window.scrollY > 150) {
     header.style.top = '0px';
-    header.style.backgroundColor = '#ffffffc7';
-    header.style.color = 'black';
+    header.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+    // header.style.color = 'black';
 
-    links.forEach(el => {
-      el.style.color = 'black';
-    });
+    // links.forEach(el => {
+    //   el.style.color = 'black';
+    // });
   } else {
     header.style.top = '0';
     header.style.backgroundColor = 'transparent';
@@ -183,59 +183,59 @@ window.addEventListener('scroll', function () {
   updateSlider(currentSlide);
 
 // ------- Section about прокрутка чисел ---------------------------------------
-// document.addEventListener('DOMContentLoaded', () => {
-//     const statsBlock = document.getElementById('stats');
-//     const stats = document.querySelectorAll('.stat');
-//     const observer = new IntersectionObserver(entries => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 stats.forEach(stat => {
-//                     const line = stat.querySelector('.line');
-//                     const number = stat.querySelector('.number');
-//                     const target = +number.getAttribute('data-target');
-//                     stat.classList.add('visible');
-//                     line.classList.add('visible');
-//                     scrollToTarget(number, target);
-//                 });
-//                 observer.disconnect();
-//             }
-//         });
-//     }, { threshold: 0.5 });
+document.addEventListener('DOMContentLoaded', () => {
+    const statsBlock = document.getElementById('stats');
+    const stats = document.querySelectorAll('.stat');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                stats.forEach(stat => {
+                    const line = stat.querySelector('.line');
+                    const number = stat.querySelector('.number');
+                    const target = +number.getAttribute('data-target');
+                    stat.classList.add('visible');
+                    line.classList.add('visible');
+                    scrollToTarget(number, target);
+                });
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 });
 
-//     observer.observe(statsBlock);
+    observer.observe(statsBlock);
 
-//     function scrollToTarget(element, target) {
-//         let start = 0;
-//         const increment = target / 100;
-//         const duration = 2000;
-//         const stepTime = duration / 100;
-//         const timer = setInterval(() => {
-//             start += increment;
-//             element.textContent = Math.round(start);
-//             if (start >= target) {
-//                 clearInterval(timer);
-//                 element.textContent = target;
-//             }
-//         }, stepTime);
-//     }
-// });
+    function scrollToTarget(element, target) {
+        let start = 0;
+        const increment = target / 100;
+        const duration = 2000;
+        const stepTime = duration / 100;
+        const timer = setInterval(() => {
+            start += increment;
+            element.textContent = Math.round(start);
+            if (start >= target) {
+                clearInterval(timer);
+                element.textContent = target;
+            }
+        }, stepTime);
+    }
+});
 
-// if (isMobile.any()) {
-//     document.body.classList.add('_touch');
+if (isMobile.any()) {
+    document.body.classList.add('_touch');
 	
-// 			let menuArrows = document.querySelectorAll('.menu-item-has-children');
-// 			if (menuArrows.length > 0) {
-// 				for (let index = 0; index < menuArrows.length; index++) {
-// 					const menuArrow = menuArrows[index];
-// 					menuArrow.addEventListener("click", function (e) {
-// 						menuArrow.parentElement.classList.toggle('_active');
-// 					});
-// 				}
-// 			}
+			let menuArrows = document.querySelectorAll('.menu-item-has-children');
+			if (menuArrows.length > 0) {
+				for (let index = 0; index < menuArrows.length; index++) {
+					const menuArrow = menuArrows[index];
+					menuArrow.addEventListener("click", function (e) {
+						menuArrow.parentElement.classList.toggle('_active');
+					});
+				}
+			}
 
-// } else {
-//     document.body.classList.add('_pc');
-// }
+} else {
+    document.body.classList.add('_pc');
+}
 
 
 // -------- Accordion -----------------------------------------

@@ -1,15 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
 	--font-family-kyiv: 'KyivTypeSans', sans-serif;
-	--font-family-mont: 'Montserrat', sans-serif;
+	--font-family-mont: "Montserrat", sans-serif;
 	--font-size: 16px;
 	--font-weight: 400;
 	--main-color: #5765F2;
-	--main-color-h: #5765F2;
+	--main-color-h: #4a57df;
 	--white-color: #fff;
 }
-
-
-
 
 .wrapper {
 	min-height: 100%;
@@ -29,7 +27,7 @@
 // Header style
 .title__h1 {
 	font-weight: 900;
-	font-size: clamp(64px, 5vw, 96px);
+	font-size: clamp(62px, 5vw, 96px);
 }
 .title__h2 {
 	font-size: clamp(32px, 5vw, 54px);
@@ -202,7 +200,7 @@
   gap: 6px;
 }
 .bar {
-  width: 50px;
+  width: 60px;
   height: 1px;
   background: rgb(255, 255, 255);
   transition: background 0.3s ease;
@@ -215,11 +213,141 @@
   text-align: right;
 }
 
-/*================  ============================*/
+/*============== About ==============================*/
+.section__padding {
+	padding: 75px 0;
+}
+.m-about {
+}
+
+.m-about__heading {
+	margin-bottom: 44px;
+}
+
+.m-about__body {
+	display: grid;
+	// grid-template-columns: 1fr 1fr;
+	grid-template-columns: 50% 1fr;
+	gap: 30px;
+}
+.m-about__img {
+	img {
+		width: 100%;
+		border-radius: 16px;
+	}
+}
+.m-about__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.content__text {
+	h3 {
+		font-weight: 700;
+		font-style: Bold;
+		font-size: clamp(24px, 4vw, 44px);
+		margin-bottom: 24px;
+	}
+	p {
+		font-family: var(--font-family-mont);
+		font-weight: 500;
+		font-size: clamp(14px, 4vw, 16px);
+		line-height: 140%;
+		margin-bottom: 12px;
+		color: #5F5F5F;
+	}
+}
+.content__btn {
+	margin: 18px 0;
+	.m-about__btn {
+
+	 }
+}
+.content__nums {
+	h4 {
+		font-weight: 700;
+		font-style: Bold;
+		font-size: clamp(24px, 4vw, 32px);
+		margin-bottom: 24px;
+	}
+}
+.stats-block {
+	display: flex;
+}
+.stat {
+	width: 220px;
+}
+.number__wrapp {
+	display: flex;
+	align-items: center;
+	.number {
+		font-family: var(--font-family-mont);
+		font-weight: 700;
+		font-style: Bold;
+		font-size: clamp(44px, 4vw, 64px);
+	}
+	span {
+		font-size: 48px;
+		font-weight: 700;
+	}
+}
+
+.label {
+	font-family: var(--font-family-mont);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 140%;
+	color: #5F5F5F;
+	margin-top: 16px;
+}
 
 
-
-/*==============  ==============================*/
+/*============== Team ==============================*/
+.m-team {
+}
+.heading__block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 44px;
+}
+.link_page {
+}
+.link_page-mob {
+ display: none;
+}
+.m-team__body {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	.team__item {
+		.vector {
+			display: inline-block;
+			font-weight: 700;
+			// font-size: clamp(8px, 3vw, 10px);
+			font-size: 10px;
+			line-height: 140%;
+			text-transform: uppercase;
+			padding: 8px 16px;
+			border-radius: 15px;
+			background: #23272A;
+			color: #fff;
+			margin: 12px 0;
+		}
+		.name {
+			font-weight: 700;
+			font-style: Bold;
+			font-size: clamp(18px, 2vw, 20px);
+			line-height: 140%;
+		}
+		.email {
+			font-weight: 400;
+			// font-size: clamp(14px, 2vw, 16px);
+			font-size: 16px;
+			line-height: 140%;
+		}
+	}
+}
 
 
 /*==============  ==============================*/
@@ -256,11 +384,6 @@
         margin: 0 30px;
     }
 }
-.footer-widget {
-}
-.footer-categories {
-}
-
 .footer__address {
     display: flex;
     justify-content: flex-end;
@@ -282,8 +405,11 @@
 	}
 }
 
-@media (max-width:1180.98px) {
-	
+@media (max-width:1040.98px) {
+	.m-team__body {
+		grid-template-columns: repeat(2, 49%);
+		gap: 10px;
+	}
 }
 
 @media (max-width:959.98px) {
@@ -440,6 +566,10 @@
 	.header__button {
 		margin-right: 3em;
 	}
+	// -------------------------
+	.m-about__body {
+		grid-template-columns: 1fr;
+	}
 	
 }
 @media (max-width:992.98px) {
@@ -470,16 +600,46 @@
 }
 
 @media (max-width:639.98px) {
-	
+	.slide-content {
+        left: 18px;  
+		width: 92%;
+	}
+	.footer {
+		border-radius: 32px 32px 0 0;
+	}
 }
+@media (max-width:580.98px) {
+	 .m-team__body {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+	.link_page {
+		display: none;
+	}
+	.link_page-mob {
+		display: block;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
 
 @media (max-width:479.98px) {
     .btn {
         width: 100%;
     }
     .slide-content {
-        left: 18px;
-        max-width: 420px;    }
+        max-width: 420px;    
+	}
+	.content__btn {
+		.m-about__btn {
+			width: 100%;
+		}
+	}
+	.stat {
+		width: 50%;
+		padding: 5px;
+	}
 
 }
 
