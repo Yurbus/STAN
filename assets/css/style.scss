@@ -752,8 +752,8 @@
 		overflow-x: scroll;
 		.posts-container {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			width: 1480px;
+			grid-template-columns: repeat(5, 340px);
+			width: 1420px;
 		}
 	}
 

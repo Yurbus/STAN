@@ -734,8 +734,8 @@
   }
   .m-posts__body .posts-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 1480px;
+    grid-template-columns: repeat(5, 340px);
+    width: 1420px;
   }
 }
 @media (max-width: 412.98px) {
