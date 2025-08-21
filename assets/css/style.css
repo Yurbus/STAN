@@ -670,6 +670,9 @@
   }
 }
 @media (max-width: 639.98px) {
+  .section__padding {
+    padding: 45px 0;
+  }
   .slide-content {
     left: 18px;
     width: 92%;
