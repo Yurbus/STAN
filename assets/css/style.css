@@ -114,10 +114,10 @@
   flex-wrap: wrap;
   overflow: hidden;
 }
-.header__menu .menu__link {
-  margin: 0;
+.header__menu .menu__list .menu__link {
+  color: #fff;
 }
-.header__menu .menu__link a {
+.header__menu .menu__list .menu__link a {
   position: relative;
   text-decoration: none;
   display: flex;
@@ -129,11 +129,30 @@
   font-size: 16px;
   font-weight: 700;
 }
-.header__menu .menu__link a:hover {
+.header__menu .menu__list .menu__link a:hover {
   text-decoration: underline;
 }
-.header__menu .menu__link a.active {
+.header__menu .menu__list .menu__link a.active {
   text-decoration: underline;
+}
+.header__menu .menu__list .menu__link:nth-last-child(2) a {
+  position: relative;
+  padding-right: 10px;
+}
+.header__menu .menu__list .menu__link:nth-last-child(2) a:after {
+  position: absolute;
+  content: "|";
+  left: 0;
+}
+.header__menu .menu__list .menu__link:last-child a {
+  position: relative;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+.header__menu .menu__list .menu__link:last-child a:after {
+  position: absolute;
+  content: "/";
+  left: 0;
 }
 
 /*================ hero ===========================*/
