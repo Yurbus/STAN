@@ -451,5 +451,36 @@
             });
         });
     </script>
+    
+    <script>
+        // Функція анімації чисел
+        function animateNumber(el, target) {
+            const duration = 2000; // тривалість анімації в мс
+            const start = 0;
+            const stepTime = Math.abs(Math.floor(duration / target));
+            let current = start;
+
+            const timer = setInterval(() => {
+                current++;
+                el.textContent = current;
+
+                if (current >= target) {
+                    el.textContent = target;
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Запускаємо анімацію після завантаження сторінки
+        document.addEventListener("DOMContentLoaded", () => {
+            const numbers = document.querySelectorAll(".number");
+
+            numbers.forEach(number => {
+                const target = +number.getAttribute("data-target");
+                animateNumber(number, target);
+            });
+        });
+    </script>
+
 </body>
 </html>
