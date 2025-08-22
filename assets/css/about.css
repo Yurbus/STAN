@@ -43,14 +43,14 @@
   justify-content: space-between;
   height: 650px;
 }
-.about-hero__body .left__content {
+.about-hero__body .left__content-about {
   padding: 54px 100px 74px 5px;
   border-radius: 0 44px 0 0;
   background: #015A46;
   max-width: 650px;
   position: relative;
 }
-.about-hero__body .left__content::after {
+.about-hero__body .left__content-about::after {
   position: absolute;
   content: "";
   background: #015A46;
@@ -59,7 +59,7 @@
   left: -99%;
   top: 0;
 }
-.about-hero__body .left__content::before {
+.about-hero__body .left__content-about::before {
   position: absolute;
   content: "";
   border-radius: 0 44px 0 0;
@@ -70,7 +70,7 @@
   left: 30px;
   top: -10px;
 }
-.about-hero__body .left__content .left__content-wrapp {
+.about-hero__body .left__content-about .left__content-wrapp {
   position: relative;
   z-index: 3;
 }

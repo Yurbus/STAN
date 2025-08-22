@@ -46,7 +46,7 @@
     align-items: flex-end;
     justify-content: space-between;
     height: 650px;
-    .left__content {
+    .left__content-about {
         padding: 54px 100px 74px 5px;
         border-radius: 0 44px 0 0;
         background: #015A46;
@@ -64,7 +64,6 @@
         &::before {
             position: absolute;
             content: '';
-            // background: url('../img/bggg.svg');
             border-radius: 0 44px 0 0;
             background: #015a4798;
             transform: rotate(-3deg);

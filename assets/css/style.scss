@@ -58,6 +58,23 @@
 		background: var(--main-color-h);
 	}
 }
+.button__style-border {
+	padding: 22px 45px;
+	border-radius: 35px;
+	border: 1px solid #5765F2;
+	color: #5765F2;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background: var(--main-color-h);
+		color: #fff;
+	}
+}
 
 
 /*================ header =========================*/
