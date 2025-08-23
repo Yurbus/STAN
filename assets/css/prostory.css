@@ -19,6 +19,23 @@
   height: 650px;
   overflow: hidden;
 }
+.prostory-hero .bg__section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.prostory-hero .bg__section img {
+  height: 650px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-hero__body {
+  position: relative;
+  z-index: 2;
+}
 
 .left__content-prostory {
   padding: 54px 100px 74px 5px;
